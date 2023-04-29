@@ -14,6 +14,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import CheckIcon from "@mui/icons-material/Check";
 import CloseIcon from "@mui/icons-material/Close";
+import CenteredLogo from "../Assets/centeredlogo.png";
 const searches = ["Ethereum", "Bitcoin", "Matic", "Binance", "XRP", "Solana"];
 const Form = () => {
   const [open, setOpen] = useState(false);
@@ -37,6 +38,7 @@ const Form = () => {
             width: "100%",
             padding: "30px",
             borderRadius: "15px",
+            position: "relative",
           }}
         >
           <Stack
@@ -124,6 +126,26 @@ const Form = () => {
           >
             Buy
           </Button>
+          <Box
+            sx={{
+              width: "50px",
+              height: "50px",
+              position: "absolute",
+              top: "-45px",
+              left: "50%",
+              borderRadius: "50%",
+              border: "8px solid #1C1731",
+              boxShadow: "0 0 0 6px #040406",
+              transform: "translateX(-50%)",
+            }}
+            className="double-border"
+          >
+            <img
+              src={CenteredLogo}
+              alt="Centered logo"
+              style={{ width: "100%", height: "100%" }}
+            />
+          </Box>
         </Stack>
       </Container>
       <Backdrop sx={{ backgroundColor: "#0b0819bd", zIndex: 1 }} open={open}>
